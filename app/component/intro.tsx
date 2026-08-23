@@ -293,7 +293,7 @@ export function Intro() {
             style={{ color: "#a67c52" }}
           >
             <a
-              href="https://github.com/cassandra-l"
+              href="https://github.com/cass-lee"
               target="_blank"
               rel="noreferrer"
               className="opacity-60 hover:opacity-100 transition-opacity duration-200"
