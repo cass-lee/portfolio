@@ -2,7 +2,7 @@ export interface Project {
   id: number;
   title: string;
   subtitle?: string;
-  category: ("web dev" | "data")[];
+  category: ("software" | "data")[];
   tech?: string[];
   image: string;
   link: string;
@@ -13,7 +13,7 @@ export const PROJECTS_DATA: Project[] = [
     id: 1,
     title: "HushNav",
     subtitle: "Quiet route navigation across Melbourne CBD",
-    category: ["web dev", "data"],
+    category: ["software", "data"],
     tech: ["React", "TypeScript", "AWS", "Python", "Mapbox"],
     image: "/images/hushnav6.jpg",
     link: "https://hushnav.app",
@@ -36,7 +36,7 @@ export const PROJECTS_DATA: Project[] = [
     id: 3,
     title: "Mastodon Web Client",
     subtitle: "A custom web client for Mastodon social network",
-    category: ["web dev"],
+    category: ["software"],
     tech: ["React", "TypeScript", "Mastodon API"],
     image: "/images/mastodon-client.jpg",
     link: "https://mastodon-client.cassandra-l.workers.dev/",

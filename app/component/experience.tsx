@@ -59,29 +59,30 @@ export function ExperienceContent() {
 
   return (
     <div
-      className="space-y-12 max-w-2xl pb-16"
-      style={{ color: "#a67c52" }}
+      className="space-y-12 max-w-2xl pb-16 dark:text-indigo-300 text-[#a67c52]"
       ref={containerRef}
     >
       {roles.map((job, idx) => (
         <div key={idx}>
-          <h3 className="text-xl font-bold dark:text-slate-100">
+          <h3 className="text-xl font-bold dark:text-slate-100/90">
             {job.role} | {job.company}
           </h3>
-          <p className="text-sm opacity-70 mb-3 italic">{job.period}</p>
+          <p className="text-sm dark:text-[#949ba4] opacity-70 mb-3 italic">
+            {job.period}
+          </p>
 
           <div className="flex flex-wrap gap-2 mb-4">
             {job.tech.map((t) => (
               <span
                 key={t}
-                className="px-3 py-1 text-[10px] uppercase tracking-wider bg-[#a67c52]/10 rounded-full font-bold"
+                className="px-3 py-1 text-[10px] uppercase tracking-wider bg-[#a67c52]/10 dark:bg-slate-600/50 rounded-full font-bold"
               >
                 {t}
               </span>
             ))}
           </div>
 
-          <p className="text-sm leading-relaxed opacity-90 dark:text-slate-300">
+          <p className="text-sm leading-relaxed opacity-90 dark:text-[#949ba4]">
             {job.description}
           </p>
         </div>
@@ -93,7 +94,7 @@ export function ExperienceContent() {
           type="button"
           onClick={handleToggle}
           aria-expanded={isOpen}
-          className="inline-flex items-center gap-3 px-8 py-3 rounded-2xl border border-[#a67c52] text-[#a67c52] hover:bg-[#a67c52] hover:text-white transition-all duration-300 font-bold uppercase tracking-widest text-xs cursor-pointer"
+          className="inline-flex items-center gap-3 px-8 py-3 rounded-2xl border border-[#a67c52] dark:border-slate-700 text-[#a67c52] dark:text-white/90 hover:bg-[#a67c52] dark:hover:bg-slate-900/50  hover:text-white dark:hover:text-indigo-300 dark:hover:border-indigo-300 transition-all duration-300 font-bold uppercase tracking-widest text-xs cursor-pointer"
         >
           <span>View Full Resume</span>
           <svg

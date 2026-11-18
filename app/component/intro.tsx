@@ -88,7 +88,7 @@ export function Intro() {
             className="absolute inset-0 z-50 flex flex-col items-center justify-center p-8 bg-[#fcfaf7] dark:bg-slate-950"
           >
             <div className="flex items-center tracking-tight font-mono font-bold text-5xl md:text-7xl lg:text-8xl">
-              <span className="text-[#a67c52] dark:text-amber-400 transition-colors duration-500">
+              <span className="text-[#a67c52] dark:text-slate-100/90 transition-colors duration-500">
                 {displayedText}
                 <motion.span
                   animate={{ opacity: [1, 0, 1] }}
@@ -97,7 +97,7 @@ export function Intro() {
                     repeat: Infinity,
                     ease: "easeInOut",
                   }}
-                  className="inline-block ml-1 h-[1.1em] w-[0.5em] bg-[#f2eee8] dark:bg-slate-800 align-middle"
+                  className="inline-block ml-1 h-[1.1em] w-[0.5em] bg-[#f2eee8] dark:bg-[#2b2d31] align-middle"
                 />
               </span>
             </div>
@@ -121,19 +121,19 @@ export function Intro() {
           <motion.span
             animate={menuOpen ? { rotate: 45, y: 7 } : { rotate: 0, y: 0 }}
             transition={{ duration: 0.3 }}
-            className="block h-[1.5px] w-6 bg-[#a67c52] dark:bg-slate-300 origin-center"
+            className="block h-[1.5px] w-6 bg-[#a67c52] dark:bg-[#f2f3f5] origin-center"
           />
 
           <motion.span
             animate={menuOpen ? { opacity: 0 } : { opacity: 1 }}
             transition={{ duration: 0.2 }}
-            className="block h-[1.5px] w-6 bg-[#a67c52] dark:bg-slate-300"
+            className="block h-[1.5px] w-6 bg-[#a67c52] dark:bg-[#f2f3f5]"
           />
 
           <motion.span
             animate={menuOpen ? { rotate: -45, y: -7 } : { rotate: 0, y: 0 }}
             transition={{ duration: 0.3 }}
-            className="block h-[1.5px] w-6 bg-[#a67c52] dark:bg-slate-300 origin-center"
+            className="block h-[1.5px] w-6 bg-[#a67c52] dark:bg-[#f2f3f5] origin-center"
           />
         </button>
       </motion.div>
@@ -143,14 +143,13 @@ export function Intro() {
         initial={{ opacity: 0 }}
         animate={{ opacity: isIntroComplete ? 1 : 0 }}
         transition={{ delay: 0.4, duration: 0.6 }}
-        className="md:hidden fixed top-8 right-15 z-[60] flex items-center gap-5"
-        style={{ color: "#a67c52" }}
+        className="md:hidden fixed top-8 right-15 z-[60] flex items-center gap-5 text-[#a67c52] dark:text-[#949ba4]"
       >
         <a
           href="https://github.com/cassandra-l"
           target="_blank"
           rel="noreferrer"
-          className="opacity-60 hover:opacity-100 transition-opacity duration-200"
+          className="opacity-60 hover:opacity-100 dark:hover:text-indigo-300 transition-all duration-200"
         >
           <Github size={20} />
         </a>
@@ -159,14 +158,14 @@ export function Intro() {
           href="https://www.linkedin.com/in/cassandra-lzc/"
           target="_blank"
           rel="noreferrer"
-          className="opacity-60 hover:opacity-100 transition-opacity duration-200"
+          className="opacity-60 hover:opacity-100 dark:hover:text-indigo-300 transition-all duration-200"
         >
           <Linkedin size={20} />
         </a>
 
         <a
           href="mailto:hi@casslee.dev"
-          className="opacity-60 hover:opacity-100 transition-opacity duration-200"
+          className="opacity-60 hover:opacity-100 dark:hover:text-indigo-300 transition-all duration-200"
         >
           <Mail size={20} />
         </a>
@@ -183,7 +182,7 @@ export function Intro() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="md:hidden fixed inset-0 z-[40] bg-black/40"
+              className="md:hidden fixed inset-0 z-[40] bg-black/50"
               onClick={() => setMenuOpen(false)}
             />
 
@@ -194,7 +193,7 @@ export function Intro() {
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
               transition={{ duration: 0.35, ease: [0.76, 0, 0.24, 1] }}
-              className="md:hidden fixed top-0 left-0 h-full z-[70] flex flex-col justify-center px-10 bg-[#fcfaf7] dark:bg-slate-950"
+              className="md:hidden fixed top-0 left-0 h-full z-[70] flex flex-col justify-center px-10 bg-[#fcfaf7] dark:bg-[#2b2d31]"
               style={{ width: "66.666%" }}
             >
               <nav className="flex flex-col space-y-8">
@@ -211,21 +210,20 @@ export function Intro() {
                         }
                         setMenuOpen(false);
                       }}
-                      className="group flex items-center text-left uppercase tracking-widest text-xs font-bold transition-all duration-300 focus:outline-none cursor-pointer"
-                      style={{ color: "#a67c52" }}
+                      className="group flex items-center text-left uppercase tracking-widest text-xs font-bold transition-all duration-300 focus:outline-none cursor-pointer text-[#a67c52] dark:text-[#dbdee1]"
                     >
                       <span
                         className={`h-[1px] transition-all duration-300 ease-out mr-4 ${
                           isActive
-                            ? "w-12 opacity-100 bg-[#a67c52] dark:bg-slate-200"
-                            : "w-6 opacity-35 group-hover:w-9 bg-[#a67c52]/60 dark:bg-slate-400"
+                            ? "w-12 opacity-100 bg-[#a67c52] dark:bg-[#5865F2]"
+                            : "w-6 opacity-35 group-hover:w-9 bg-[#a67c52]/60 dark:bg-[#949ba4]"
                         }`}
                       />
                       <span
                         className={`transition-all duration-300 ease-in-out ${
                           isActive
-                            ? "opacity-100 tracking-widest text-[#a67c52] dark:text-slate-100"
-                            : "opacity-60 text-[#a67c52]/90 dark:text-slate-400"
+                            ? "opacity-100 tracking-widest text-[#a67c52] dark:text-indigo-300"
+                            : "opacity-60 text-[#a67c52]/90 dark:text-[#949ba4] group-hover:dark:text-[#dbdee1]"
                         }`}
                       >
                         {label}
@@ -244,7 +242,7 @@ export function Intro() {
         initial={{ opacity: 0 }}
         animate={{ opacity: isIntroComplete ? 1 : 0 }}
         transition={{ delay: 0.4, duration: 0.6 }}
-        className="grid h-full w-full max-w-6xl grid-cols-1 gap-8 px-8 items-center md:grid-cols-[1fr_2.5fr] lg:pl-16 pr-20 text-[#a67c52] dark:text-slate-200 transition-colors duration-500 ml-0 md:ml-[max(2rem,calc((100vw-64rem)/2))]"
+        className="grid h-full w-full max-w-6xl grid-cols-1 gap-8 px-8 items-center md:grid-cols-[1fr_2.5fr] lg:pl-16 pr-20 text-[#a67c52] dark:text-[#dbdee1] transition-colors duration-500 ml-0 md:ml-[max(2rem,calc((100vw-64rem)/2))]"
       >
         {/* Left Container */}
         <div className="relative hidden md:flex flex-col h-fit justify-center">
@@ -262,22 +260,21 @@ export function Intro() {
                       setSearchParams({ tab: id });
                     }
                   }}
-                  className="group flex items-center text-left uppercase tracking-widest text-xs font-bold transition-all duration-300 focus:outline-none cursor-pointer"
-                  style={{ color: "#a67c52" }}
+                  className="group flex items-center text-left uppercase tracking-widest text-xs font-bold transition-all duration-300 focus:outline-none cursor-pointer text-[#a67c52] dark:text-[#dbdee1]"
                 >
                   <span
                     className={`h-[1px] transition-all duration-300 ease-out mr-4 ${
                       isActive
-                        ? "w-12 opacity-100 bg-[#a67c52] dark:bg-slate-200"
-                        : "w-6 opacity-35 group-hover:w-9 bg-[#a67c52]/60 dark:bg-slate-400"
+                        ? "w-12 opacity-100 bg-[#a67c52] dark:bg-indigo-300"
+                        : "w-6 opacity-35 group-hover:w-9 bg-[#a67c52]/60 dark:bg-[#949ba4]"
                     }`}
                   />
 
                   <span
                     className={`transition-all duration-300 ease-in-out ${
                       isActive
-                        ? "opacity-100 tracking-widest text-[#a67c52] dark:text-slate-100"
-                        : "opacity-60 text-[#a67c52]/90 dark:text-slate-400"
+                        ? "opacity-100 tracking-widest text-[#a67c52] dark:text-indigo-300"
+                        : "opacity-60 text-[#a67c52]/90 dark:text-[#949ba4]"
                     }`}
                   >
                     {label}
@@ -288,15 +285,12 @@ export function Intro() {
           </nav>
 
           {/* Social Icons — desktop  */}
-          <div
-            className="absolute top-full left-2 mt-8 flex items-center space-x-6 dark:text-current"
-            style={{ color: "#a67c52" }}
-          >
+          <div className="absolute top-full left-2 mt-8 flex items-center space-x-6 text-[#a67c52] dark:text-[#949ba4]">
             <a
               href="https://github.com/cass-lee"
               target="_blank"
               rel="noreferrer"
-              className="opacity-60 hover:opacity-100 transition-opacity duration-200"
+              className="opacity-60 hover:opacity-100 dark:hover:text-indigo-300 transition-all duration-200"
             >
               <Github size={20} />
             </a>
@@ -304,13 +298,13 @@ export function Intro() {
               href="https://www.linkedin.com/in/cassandra-lzc/"
               target="_blank"
               rel="noreferrer"
-              className="opacity-60 hover:opacity-100 transition-opacity duration-200"
+              className="opacity-60 hover:opacity-100 dark:hover:text-indigo-300 transition-all duration-200"
             >
               <Linkedin size={20} />
             </a>
             <a
               href="mailto:hi@casslee.dev"
-              className="opacity-60 hover:opacity-100 transition-opacity duration-200"
+              className="opacity-60 hover:opacity-100 dark:hover:text-indigo-300 transition-all duration-200"
             >
               <Mail size={20} />
             </a>
@@ -327,13 +321,12 @@ export function Intro() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
                 transition={{ duration: 0.4, ease: "easeOut" }}
-                className="space-y-4 text-left"
-                style={{ color: "#a67c52" }}
+                className="space-y-4 text-left text-[#a67c52] dark:text-[#dbdee1]"
               >
-                <h1 className="text-4xl md:text-5xl font-sans tracking-tight font-bold dark:text-slate-100">
+                <h1 className="text-4xl md:text-5xl font-sans tracking-tight font-bold dark:text-slate-100/80">
                   Hi, I am Cassandra.
                 </h1>
-                <p className="text-lg md:text-xl font-normal leading-relaxed opacity-90 dark:text-slate-300">
+                <p className="text-lg md:text-xl font-normal leading-relaxed opacity-90 dark:text-[#949ba4]">
                   I like working with data, and making fun things with code.
                 </p>
               </motion.div>

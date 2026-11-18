@@ -99,7 +99,7 @@ export function TechStackContent() {
                     delay: groupIndex * 0.12 + skillIndex * 0.04,
                   }}
                   // Premium editorial style pill layout
-                  className="px-4 py-2 text-xs font-medium rounded-full border border-[#a67c52]/15 dark:border-slate-800 bg-white/40 dark:bg-slate-900/30 text-[#a67c52] dark:text-slate-200 shadow-sm backdrop-blur-[2px] transition-colors duration-300 hover:border-[#a67c52]/40 dark:hover:border-slate-600"
+                  className="px-4 py-2 text-xs font-medium rounded-full border border-[#a67c52]/15 dark:border-indigo-300/50 bg-white/40 dark:bg-slate-900/30 text-[#a67c52] dark:text-slate-400 shadow-sm dark:shadow-slate-300/20 backdrop-blur-[2px] transition-colors duration-300 hover:border-[#a67c52]/40 dark:hover:border-indigo-300/80"
                 >
                   {skill}
                 </motion.span>

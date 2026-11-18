@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { PROJECTS_DATA } from "~/data/portfolio";
 
 export function PortfolioContent() {
-  const [activeFilter, setActiveFilter] = useState<"all" | "web dev" | "data">(
+  const [activeFilter, setActiveFilter] = useState<"all" | "software" | "data">(
     "all",
   );
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -12,7 +12,7 @@ export function PortfolioContent() {
   // Filter the project array based on selected sub-tab
   const filteredProjects = PROJECTS_DATA.filter((project) => {
     if (activeFilter === "all") return true;
-    return project.category.includes(activeFilter as "web dev" | "data");
+    return project.category.includes(activeFilter as "software" | "data");
   });
 
   // Monitor scroll height to show/hide the scroll indicator
@@ -36,8 +36,8 @@ export function PortfolioContent() {
   return (
     <div className="flex flex-col h-[75vh] w-full relative">
       {/* Filter */}
-      <div className="flex items-center space-x-6 mb-6 pb-2 border-b border-[#a67c52]/10 dark:border-slate-800">
-        {(["all", "web dev", "data"] as const).map((filter) => {
+      <div className="flex items-center space-x-6 mb-6 pb-2 border-b border-[#a67c52]/10 dark:border-slate-800 dark:text-indigo-300">
+        {(["all", "software", "data"] as const).map((filter) => {
           const isSelected = activeFilter === filter;
           return (
             <button
@@ -51,7 +51,7 @@ export function PortfolioContent() {
               {isSelected && (
                 <motion.div
                   layoutId="filterActiveLine"
-                  className="absolute bottom-0 left-0 right-0 h-[1px] bg-[#a67c52] dark:bg-slate-200"
+                  className="absolute bottom-0 left-0 right-0 h-[1px] bg-[#a67c52] dark:bg-indigo-300"
                   transition={{ type: "spring", stiffness: 380, damping: 30 }}
                 />
               )}
@@ -95,7 +95,7 @@ export function PortfolioContent() {
                 </div>
 
                 {/* Meta data */}
-                <div className="absolute inset-0 p-8 flex flex-col justify-end text-white">
+                <div className="absolute inset-0 p-8 flex flex-col justify-end text-slate-100/90">
                   <div className="mb-4">
                     <span className="text-[10px] tracking-widest font-mono uppercase opacity-70 block mb-1 ">
                       // {project.category.join(" // ")}
@@ -124,7 +124,7 @@ export function PortfolioContent() {
                   <div>
                     <a
                       href={project.link}
-                      className="cursor-pointer inline-flex items-center px-4 py-2 bg-[#f2eee8] text-[#a67c52] text-xs font-bold rounded-full transition-all group"
+                      className="cursor-pointer inline-flex items-center px-4 py-2 bg-[#f2eee8] text-[#a67c52] dark:text-indigo-300 dark:bg-gray-900 text-xs font-bold rounded-full transition-all group"
                     >
                       <span>Go to project</span>
                       <span className="ml-2 inline-block transition-transform duration-300 origin-left group-hover:scale-x-150">
@@ -146,9 +146,9 @@ export function PortfolioContent() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 10 }}
-            className="absolute bottom-4 right-4 pointer-events-none flex items-center space-x-2 bg-white/80  dark:border-slate-800 dark:bg-slate-950/90 px-3 py-1.5 rounded-full text-[10px] uppercase font-bold tracking-widest shadow-lg "
+            className="absolute bottom-4 right-4 pointer-events-none flex items-center space-x-2 bg-white/80  dark:border-slate-800 dark:bg-slate-900 px-3 py-1.5 rounded-full text-[10px] uppercase font-bold tracking-widest shadow-lg "
           >
-            <span className=" text-[#a67c52] backdrop-blur-3xl">
+            <span className=" text-[#a67c52] dark:text-indigo-300 backdrop-blur-3xl dark:backdrop:blur-3xl">
               Scroll to see more
             </span>
             <motion.svg
@@ -162,8 +162,8 @@ export function PortfolioContent() {
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth={2.5}
-              stroke="#a67c52"
-              className="w-3 h-3"
+              stroke="currentColor"
+              className="w-3 h-3 text-[#a67c52] dark:text-indigo-300"
             >
               <path
                 strokeLinecap="round"

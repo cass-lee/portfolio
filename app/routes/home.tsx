@@ -8,10 +8,6 @@ export function meta({}: Route.MetaArgs) {
   ];
 }
 
-export function links() {
-  return [{ rel: "icon", href: "/portfolio-logo.png" }];
-}
-
 export default function Home() {
   return <Intro />;
 }
