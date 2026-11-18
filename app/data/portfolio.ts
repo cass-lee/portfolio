@@ -30,7 +30,7 @@ export const PROJECTS_DATA: Project[] = [
       "Statistical Modeling",
     ],
     image: "/images/aus-retail2.jpg",
-    link: "https://github.com/cassandra-l/australian-retail-trade-forecasting",
+    link: "https://github.com/cass-lee/australian-retail-trade-forecasting",
   },
   {
     id: 3,
@@ -48,6 +48,6 @@ export const PROJECTS_DATA: Project[] = [
     category: ["data"],
     tech: ["JavaScript", "D3.js", "Data Visualization", "Data Analysis"],
     image: "/images/urban-heat3.jpg",
-    link: "https://urban-heat-dashboard.cassandra-l.workers.dev/",
+    link: "https://cass-lee.github.io/urbanheat-dashboard/",
   },
 ];
