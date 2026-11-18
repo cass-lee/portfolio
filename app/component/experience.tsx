@@ -3,7 +3,7 @@ import { useState, useRef } from "react";
 const roles = [
   {
     company: "Stile Education",
-    role: "Software Engineering Intern",
+    role: "Software Engineer Intern",
     period: "Aug 2026 – Nov 2026",
     tech: [
       "Rust",
@@ -129,7 +129,7 @@ export function ExperienceContent() {
               rel="noreferrer"
               className="text-xs font-bold uppercase tracking-wider hover:opacity-75 transition-opacity inline-flex items-center gap-1.5"
             >
-              Software Engineering ↗
+              Software Engineering Resume ↗
             </a>
 
             <a
@@ -138,7 +138,7 @@ export function ExperienceContent() {
               rel="noreferrer"
               className="text-xs font-bold uppercase tracking-wider hover:opacity-75 transition-opacity inline-flex items-center gap-1.5"
             >
-              Data Science & Analytics ↗
+              Data Science & Analytics Resume ↗
             </a>
           </div>
         </div>
